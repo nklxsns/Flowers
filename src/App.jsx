@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
 import Flowers from "./pages/Flowers";
@@ -8,14 +8,14 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Toaster position="top-right" />{" "}
+      <Router>
+        <Toaster position="top-right" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/flowersPage" element={<Flowers />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
